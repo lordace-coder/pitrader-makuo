@@ -1,0 +1,896 @@
+/* base dir styling */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ .img-loader{
+    width: 240px;
+    height: 240px;
+    animation: poping 2s 1s infinite alternate linear;
+    transition: 0.8s;
+ }
+ @keyframes poping {
+    0% {
+        width: 240px;height: 240px;
+    }
+    50%{
+        width: 250px;height:250px;
+    }
+    100%{
+        width: 240px;height: 240px;
+    }
+ }
+
+ #info{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 200;
+ }
+ .show-info{
+    width: 300px;
+    background-color: rgb(57, 55, 55);
+    color: #fff;
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+ .txt{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     font-weight: 400;
+     font-size: 14px;
+     width: 80%;
+ }
+ #okay-btn{
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: .5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    background-color: rebeccapurple;
+ }
+ #navagation{
+     width: 100%;
+     height: 80px;
+     color: rgb(215, 208, 208);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-sizing: border-box;
+     padding-left: 70px;
+     padding-right: 70px;
+     position: fixed;
+     width: 100%;
+     z-index: 300;
+     transition: .4s all;
+     background-color: rgba(60, 9, 97, 0.95);
+ }
+ .logo{
+     width: 200px;
+     height: 55px;
+     box-sizing: border-box;
+     overflow: hidden;
+     background-image: url(images/pi\ net2.png);
+     background-repeat: no-repeat;
+     background-size: 100% 90%;
+     cursor: pointer;
+ }
+ .pilinks{
+     width: 500px;
+     height: 55px;
+     box-sizing: border-box;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 10px;
+ }
+ .pilinks a{
+    text-decoration: none;
+    color: rgb(213, 210, 210);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    transition: .3s;
+ }
+ .pilinks a:hover{
+    border-bottom: 2px solid white;
+    color: white;
+ }
+ .medias{
+     width: 150px;
+     height: 55px;
+     box-sizing: border-box;
+     overflow: hidden;
+     margin-top: 15px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .medias aside:hover{
+    color: #fff;
+ }
+ .search{
+     width: 30px;
+     height: 55px;
+     box-sizing: border-box;
+     margin-top: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .search svg:hover{
+    color: #fff;
+ }
+ .menu{
+    margin-left: -30px;
+ }
+ #menu-btn{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    display: none;
+ }
+ .links{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ #menu-show{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: rgb(60, 9, 97, 0.7);
+    scale: 0.8;
+    transition: .6s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    display: none;
+    z-index: 200;
+ }
+ .show{
+    width: 90%;
+    height: 300px;
+ }
+ .show a{
+    text-decoration: none;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    display: block;
+ }
+ .media-via-screen{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+ }
+ .media-via-screen svg{
+    margin-right: 20px;
+    width: 18px;
+    height: 18px;
+ }
+ #sect1 {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-image: url(images/cane.png);
+    background-repeat: repeat;
+ }
+.sect-info{
+    width: 100%;
+    background: linear-gradient(
+        100deg,
+        rgb(50, 5, 87),
+        rgb(50, 5, 87),
+        rgb(60, 9, 97, 0.7)
+    );
+}
+.txts{
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ttx{
+    width: 750px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+.ttx h2{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+.ass{
+    font-size: 25px;
+    line-height: 35px;
+    width: 100%;
+    font-weight: 600;
+}
+.ttx-btn{
+    width: 270px;
+    height: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     letter-spacing: .5px;
+     margin-top: 20px;
+     font-size: 17px;
+     font-weight: 600;
+     color: goldenrod;
+     background-color: transparent;
+     border: 2px solid goldenrod;
+     border-radius: 5px;
+     transition: .4s;
+     cursor: pointer;
+}
+.ttx-btn:hover{
+    background-color: goldenrod;
+    color: white;
+}
+.ttx2{
+    margin-top: -50px;
+    width: 400px;
+    height: 600px;
+    background-image: url(images/pi_video-6.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ttx2 button {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+#sect2{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: .1px;
+}
+.sect2head{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #8a348e;
+}
+.sect2head svg{
+    transform: rotateY(180deg);
+}
+.headtxt{
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 35px;
+    line-height: 50px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    top: 30px;
+}
+.sect2b{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 70px;
+}
+.show2b{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+.show2b h2{
+    font-size: 35px;
+    color: #8a348e;
+    font-weight: 650;
+}
+.show2b aside{
+    font-size: 20px;
+    font-weight: 630;
+    letter-spacing: .5px;
+    color: rgb(55, 52, 52);
+}
+.btn-holde{
+    width: 100%;
+    text-align: start;
+    margin-top: 30px;
+}
+.btn-2b{
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #8a348e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.show2b2{
+    width: 400px;
+    height: 350px;
+    box-sizing: border-box;
+    background-image: url(images/coinbase.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.auth{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    margin-top: 50px;
+}
+.authshow{
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 5px 0px 5px rgb(155, 151, 151);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+.serv{
+    width: 100%;
+    text-align: center;
+    scale: 0.5;
+    opacity: 0.5;
+}
+.img{
+    width: 70px;
+    height: 70px;
+    background-image: url(images/galance.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+.img2{
+    width: 70px;
+    height: 70px;
+    background-image: url(images/mobile.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+.img3{
+    width: 70px;
+    height: 70px;
+    background-image: url(images/globe.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+.authshow h2{
+    color: rgb(46, 37, 37);
+    font-weight: 600;
+}
+.authshow aside{
+    width: 90%;
+    text-align: center;
+    letter-spacing: .5px;
+    font-size: 18px;
+    color: rgb(85, 80, 80);
+    transition: .6s all;
+}
+.sect3{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: linear-gradient(
+        100deg,
+        #8a348e,
+        rgb(101, 56, 145),
+        rgb(109, 74, 180)
+    );
+    flex-wrap: wrap;
+}
+.expres{
+    width: 420px;
+    height: 450px;
+    box-sizing: border-box;
+}
+#expres{
+    width: 350x;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kkk{
+    height: 400px;
+    width: auto;
+}
+
+
+#expre-txt h2{
+    font-size: 35px;
+    letter-spacing: .5px;
+    color: rgb(231, 186, 73);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+.donlod-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.dbtn1{
+    width: 200px;
+    height: 65px;
+    background-image: url(images/google_play.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+}
+.dbtn1:nth-child(2){
+    background-image: url(images/apple_store.png);
+}
+.dwon{
+    font-size: 16px;
+    font-weight: 800px;
+    color: #eee7e7;
+    line-height: 25px;
+    letter-spacing: .3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+
+#foot{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(36, 34, 34);
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+.morenav{
+    width: 600px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #d3cece;
+    font-size: 22px;
+    line-height: 50px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.net{
+    width: 300px;
+    height: 70px;
+    margin-top: -100px;
+    background-image: url(images/pi\ net2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ctt{
+    margin-left: 30px;
+    color: rgb(110, 107, 107);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+.ctt h4{
+    font-size: 14px;
+    margin-bottom: -5px;
+}
+.ctt h3{
+    font-size: 16px;
+    letter-spacing: .3px;
+    font-weight: 500;
+}
+.ctt2{
+    margin-right: 40px;
+}
+.ctt2 button{
+    width: 100px;
+    height: 35px;
+    background-color: goldenrod;
+    color: rebeccapurple;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     border: none;
+     border-radius: 3px;
+     font-weight: 500;
+     font-size: 16px;
+
+}
+
+/* media queries */
+@media screen and (max-width:1290px) {
+    .ttx{
+        width: 650px;
+    }
+    .ddd{
+        top: 90% !important;
+    }
+}
+@media screen and (max-height:400px) {
+    #menu-show{
+        padding-top: 100px;
+    }
+    
+}
+@media screen and (min-width:1200px) {
+    .txts{
+        height: 100vh;
+    }
+    
+}
+@media  screen and (max-width:1200px) {
+    .pilinks{
+        display: none;
+    }
+    .medias{
+        display: none;
+    }
+    .links{
+        width: 10%;
+    }
+    #menu-btn{
+        display: block;
+    }
+    .search{
+        margin-top: 0px;
+    }
+    #menu-btn{
+        margin-top: 0px;
+    }
+    .txts{
+        min-height: 100vh;
+    }
+    .ttx{
+       width: 450px;
+    }
+    .ttx h2{
+        font-size: 40px;
+    }
+    .ass{
+        font-size: 20px;
+    }
+    .morenav{
+        font-size: 18px;
+        width: 450px;
+    }
+    .net{
+        width: 250px;
+        height: 60px;
+    }
+
+
+}
+@media screen and (max-width:990px) {
+    .links{
+        width: 20%;
+    }
+    .sect-info{
+        padding-top: 70px;
+    }
+    .ttx{
+        width: 100%;
+    }
+    .ttx h2{
+        margin-bottom: 10px;
+    }
+    .ttx2{
+        width: 95%;
+        height: 300px;
+        margin: auto auto;
+        background-image: url(images/screenvidioe.jpeg);
+        background-size: 100% 100%;
+    }
+    .ttx2 button{
+        display: none;
+    }
+    .sect2b{
+        flex-direction: column-reverse;
+    }
+    .show2b{
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    .show2b2{
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        min-height: 300px;
+        margin: 20px auto;
+    }
+    .authshow{
+        margin: 15px;
+        width: 300px;
+        min-height: 250px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .authshow:hover {
+        transform: translateY(-5px);
+    }
+    #expre-txt{
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+@media screen and (max-width:550px) {
+    #navagation{
+        height: 60px;
+    }
+    .logo{
+        width: 150px;
+        height: 40px;
+    }
+    #navagation{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .txts{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .ttx h2{
+        font-size: 25px;
+    }
+    .ass{
+        font-size: 16px;
+        line-height: 27px;
+    }
+   .ttx2{
+    height: 250px !important;
+    margin-top: 20px;
+   }
+   .headtxt{
+    font-size: 20px;
+    line-height: 35px;
+   }
+   .sect2head{
+    height: 200px;
+   }
+   .show2b2{
+    height: 400px;
+}
+.dwon{
+    font-size: 18px;
+}
+#foot{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+}
+@media screen and (max-width:680px) {
+    .ttx2{
+        width: 100%;
+        height: 300px;
+        margin-top: 5px;
+    }
+    .show2b{
+        width: 90%;
+    }
+    .show2b2{
+        width: 90%;
+    }
+    #expre-txt{
+        width: 95%;
+    }
+}
+@media screen and (max-width:400px) {
+    .logo{
+        width: 130px;
+        height: 30px;
+    }
+    #navagation{
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .links{
+        width: 30%;
+    }
+    .search svg{
+        width: 18px;
+        height: 18px;
+    }
+    .ttx2{
+        height: 200px !important;
+        margin-top: 20px;
+    }
+    .show2b2{
+        height: 350px !important;
+    }
+    .show2b h2{
+        font-size: 30px;
+    }
+    .show2b aside{
+        font-size: 16px;
+    }
+    #expre-txt h2{
+        font-size: 20px;
+    }
+    .morenav{
+        font-size: 15px;
+        line-height: 35px;
+    }
+    
+}
+@media screen and (max-width:280px) {
+    .logo{
+        width: 100px;
+        height: 25px;
+    }
+    #navagation{
+        padding-left: 10px !important;
+        padding-right: 10px;
+    }
+    .search svg{
+        width: 16px;
+        height: 16px;
+    }
+    #menu-btn svg{
+        width: 17px;
+        height: 17px;
+    }
+    .ass{
+        font-size: 12px;
+    }
+    .ttx-btn{
+        width: 200px;
+        font-size: 14px;
+    }
+    .ttx2{
+        margin-top: 20px;
+        height: 150px !important;
+    }
+    .sect2head{
+        height: 155px;
+    }
+    .headtxt{
+        margin-top: -15px;
+        font-size: 10px;
+        line-height: 30px;
+    }
+    .show2b2{
+        height: 300px !important;
+    }
+    .show2b{
+        position: relative;
+        top: 10px;
+    }
+    .show2b h2{
+        font-size: 25px;
+    }
+    .show2b aside{
+        font-size: 14px;
+    }
+    .btn-2b{
+        font-size: 12px;
+        width: 200px;
+    }
+    .img{
+        width: 50px;
+        height: 50px;
+    }
+    .img2{
+        width: 50px;
+        height: 50px; 
+    }
+    .img3{
+
+        width: 50px;
+        height: 50px;
+    }
+    .serv h2{
+        font-size: 20px;
+    }
+    .serv aside{
+        font-size: 15px;
+    }
+    .authshow{
+        height: 250px;
+    }
+    .dwon{
+        font-size: 13px;
+    }
+    .morenav{
+        font-size: 12px;
+        line-height: 32px;
+    }
+    .net{
+        width: 200px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:500px) {
+    .dbtn1{
+        margin: auto auto;
+    }
+}
+

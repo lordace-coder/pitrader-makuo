@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp.favicon.io/favicon-16x16.png' %}">
+      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}"> 
+    <title>Pi Wallet</title>
+</head>
+<style>
+    .set{
+        padding-top: 70px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+        'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+    }
+    .bttp{
+        width: 100%;
+        text-align: center;
+    }
+    .bttp button{
+        width: 200px;
+        height: 40px;
+        background-color: #8752ab;
+        border: none;
+        border-radius: 13px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    @media screen and (max-width:550px) {
+        .lette{
+            font-size: 13px !important;
+        }
+    }
+    @media screen and (max-width:400px) {
+        .lette{
+            font-size: 10px !important;
+        } 
+    }
+
+</style>
+<body>
+    <header class="wallet-head">
+        <nav class="wallet-nav">
+            <a href="">
+                <button class="row">
+                    &leftarrow;
+                </button>
+            </a>
+            <aside style="display:flex; align-items:center;justify-content:center;">
+                <img class="iig" src="{% static 'piconverterapp/media/wallet2.png' %}" alt="">  wallet
+            </aside>
+        </nav>
+    </header>
+
+    <section class="set">
+
+        <h2 class="h2" style="text-align: center; font-size:25px;color:#8752ab">
+            Unlock pi wallet
+        </h2>
+        <br>
+        <aside class="lette" style="width:90%; text-align:center;font-weight:500;margin:auto auto">
+            Invalid 24 passphrase please check your passphrase and try again.
+    </aside>
+    <br>
+    <aside class="bttp">
+        <a href="/pi-wallet/" loading="lazy">
+            <button>
+                Try again
+            </button>
+        </a>
+    </aside>
+    <br>
+    <br>
+    <aside class="inform">
+        <aside>
+         As a non-custodiăl wăllet, your wrăllet păssphrăse is exclusively accessible only to you. Récovery of păssphrăse is currently impossible.
+         <br>
+         <br>
+         <br>
+         Lost your păssphrăse?<a href="">You can create a new wăllet</a>, but all your π in your previous wăllet will be inaccessible. 
+        </aside>  
+     </aside>
+    </section>
+
+</body>
+</html>

