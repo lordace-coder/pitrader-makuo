@@ -5,7 +5,7 @@ import requests
 # from . import models
 
 # Get API key from environment variables
-api_key = settings.SENDINBLUE_API_KEY
+api_key = os.getenv("SENDINBLUE_API_KEY")
 
 
 def send_mail(mail_info, mail_subj, std_name):
