@@ -1,205 +1,341 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pi Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." /> 
-    <link rel="canonical" href="https://Net-access{{request.path_info}}" />               
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pi Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.."
+    />
+    <link rel="canonical" href="https://Net-access{{request.path_info}}" />
     <meta property="og:site_name" content="Net-access" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Pi Exchange, Blockchain, Community & Developer Platform | Pi Network" />
-<meta property="og:description" content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee." />
-<meta property="og:image" content="https://Net-access{% static '' %}" />
-<meta property="og:locale" content="en_us" />
-<meta property="og:url" content="https://PiConverter.info{{request.path_info}}" />
-<meta name="twitter:site" content="@PiConverter" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="Pi exchanger, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.." />
-<meta name="twitter:creator" content="@PiNetwork" />
-<meta name="twitter:image" content="https://afribang.com{% static '' %}" />
-<meta property="twiter:card" content="summary_large_image" />
-<meta name="twitter:image:alt" content="PiConverter Logo" />
-      <link rel="stylesheet" href="{% static 'piconverterapp/styles/docs.css' %}">
-      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}">
-      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}">
-      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}">
-      <link rel="manifest" href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}"> 
-    <title> Pi Browser </title>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Pi Exchange, Blockchain, Community & Developer Platform | Pi Network"
+    />
+    <meta
+      property="og:description"
+      content="Pi Converter, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee."
+    />
+    <meta property="og:image" content="https://Net-access{% static '' %}" />
+    <meta property="og:locale" content="en_us" />
+    <meta
+      property="og:url"
+      content="https://PiConverter.info{{request.path_info}}"
+    />
+    <meta name="twitter:site" content="@PiConverter" />
+    <meta name="twitter:title" content="" />
+    <meta
+      name="twitter:description"
+      content="Pi exchanger, Blockchain, A Fast And Reliable Way to Exchange Your Pi Coin, Whit Trust And Garantee.."
+    />
+    <meta name="twitter:creator" content="@PiNetwork" />
+    <meta name="twitter:image" content="https://afribang.com{% static '' %}" />
+    <meta property="twiter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="PiConverter Logo" />
+    <link
+      rel="stylesheet"
+      href="{% static 'piconverterapp/styles/docs.css' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'piconverterapp/favicon.io/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'piconverterapp/favicon.io/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'piconverterapp/favicon.io/favicon-16x16.png' %}"
+    />
+    <link
+      rel="manifest"
+      href="{% static 'piconverterapp/favicon.io/site.webmanifest' %}"
+    />
+    <title>Pi Browser</title>
     <!-- end metadata -->
-</head>
+  </head>
 
-<style>
-  si{
-    font-weight: 500;
-    color: rebeccapurple;
-  }
-</style>
-<body>
-
-  <aside id="load-body" style="display:flex;align-items:center;justify-content:center; position:fixed;background-color:#fff;width:100%;height:100vh;flex-direction:column;">
-
-    <aside class="lodd">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="100" height="100" style="shape-rendering: auto; display: block; background: transparent;"><g><circle stroke-dasharray="164.93361431346415 56.97787143782138" r="35" stroke-width="10" stroke="rgb(240, 185, 45)" fill="none" cy="50" cx="50">
-        <animateTransform keyTimes="0;1" values="0 50 50;360 50 50" dur="1s" repeatCount="indefinite" type="rotate" attributeName="transform"/>
-      </circle><g/></g><!-- [ldio] generated by https://loading.io --></svg>
-    </aside>
-    <br>
-    <br>
-    <aside class="siw">
-      Switching To Pi Browser
-    </aside>
-
-  </aside>
-   
-  <nav class="hdd">
-    <aside class="as1">
-      &leftarrow;
-    </aside>
-    <aside class="as2">
-      <h3>Home</h3><img class="imgg" src="{% static 'piconverterapp/media/Pi-Network.png' %}" alt="">
-    </aside>
-    <aside class="down">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" font-weight="600" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-      </svg>
-    </aside>
-  </nav>
-
-  <section class="set1">
-
-    <aside class="logo">
-      <img src="{% static 'piconverterapp/media/Pi-Network.png' %}" alt="">
-    </aside>
-    <aside class="logo-txt">
-      Welcome to the Pi Browser
-    </aside>
-
-    <aside class="icon-set">
-
-      <div class="icon-holder">
-       <a href="/pi-wallet/" class="lik">
-        <div class="icon">
-          <img class="img3" src="{% static 'piconverterapp/media/fire.jpg' %}" alt="">
-          <br>
-         <si>Fireside</si>
-        </div>
-       </a>
-       <a href="/pi-wallet/" class="lik">
-        <div class="icon">
-          <img class="img3" src="{% static 'piconverterapp/media/wallet.jpg' %}" alt="">
-          <br>
-         <si>Wallet</si>
-        </div>
-       </a>
-       <a href="/pi-wallet/" class="lik">
-        <div class="icon">
-          <img class="img3" src="{% static 'piconverterapp/media/bob.jpg' %}" alt="">
-          <br>
-         <si>Brainstorm</si>
-        </div>
-       </a>
-      </div>
-<br>
-      <div class="icon-holder">
-        <a href="/pi-wallet/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/mine.jpg' %}" alt="">
-           <br>
-          <si>Mine</si>
-         </div>
-        </a>
-        <a href="/pi-wallet/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/block.jpg' %}" alt="">
-           <br>
-          <si>Blockchain</si>
-         </div>
-        </a>
-        <a href="/develop/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/dev.jpg' %}" alt="">
-           <br>
-          <si>Develop</si>
-         </div>
-        </a>
-       </div>
-<br>
-       <div class="icon-holder">
-        <a href="/pi-wallet/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/kyc.jpg' %}" alt="">
-           <br>
-          <si>KYC</si>
-         </div>
-        </a>
-        <a href="/pi-wallet/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/msg.jpg' %}" alt="">
-           <br>
-          <si>Chat</si>
-         </div>
-        </a>
-        <a href="/pi-wallet/" class="lik">
-         <div class="icon">
-           <img class="img3" src="{% static 'piconverterapp/media/prov.jpg' %}" alt="">
-           <br>
-          <si>Profiles</si>
-         </div>
-        </a>
-       </div>
-<br>
-       <div class="icon-holder">
-
-             <a href="/pi-payment/selection" class="lik">
-          <div class="icon">
-            <div class="" style="border: 1px solid purple; border-radius: 10px; padding: 3px;">
-              <img class="" src="{% static 'piconverterapp/domain.svg' %}" alt="" width="55" height="55">
-            <br>
-            </div>
-           <si>Domain</si>
-          
-          </div>
-        </a>
-
-        <a href="/pi-payment/selection" class="lik">
-          <div class="icon">
-            <img class="img3" src="{% static 'piconverterapp/media/p2p.jpg' %}" alt="">
-            <br>
-           <si>Trade id</si>
-          </div>
-        </a>
-       
-       
-      
-        <a href="" class="lik">
-         <div class="icon">
-         </div>
-        </a>
-       </div>
-    </aside>
-
-    <br>
-    <br>
-<aside class="ijf">
-    <button class="exbtn">
-      <img src="{% static 'piconverterapp/media/compass.png' %}" alt=""> Explore the Testnet Ecosystem
-    </button>
-  </aside> 
-<br>
-<br>
-  </section>
-
-  <script>
-    var load = document.getElementById('load-body');
-
-    window.onload = function () {
-      setTimeout(() => {
-        load.style.display = 'none';
-    }, 1000);
+  <style>
+    si {
+      font-weight: 500;
+      color: rebeccapurple;
     }
-  </script>
+  </style>
+  <body>
+    <aside
+      id="load-body"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+      "
+    >
+      <aside class="lodd">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+          width="100"
+          height="100"
+          style="shape-rendering: auto; display: block; background: transparent"
+        >
+          <g>
+            <circle
+              stroke-dasharray="164.93361431346415 56.97787143782138"
+              r="35"
+              stroke-width="10"
+              stroke="rgb(240, 185, 45)"
+              fill="none"
+              cy="50"
+              cx="50"
+            >
+              <animateTransform
+                keyTimes="0;1"
+                values="0 50 50;360 50 50"
+                dur="1s"
+                repeatCount="indefinite"
+                type="rotate"
+                attributeName="transform"
+              />
+            </circle>
+            <g />
+          </g>
+          <!-- [ldio] generated by https://loading.io -->
+        </svg>
+      </aside>
+      <br />
+      <br />
+      <aside class="siw">Switching To Pi Browser</aside>
+    </aside>
 
-        
-</body>
+    <nav class="hdd">
+      <aside class="as1">&leftarrow;</aside>
+      <aside class="as2">
+        <h3>Home</h3>
+        <img
+          class="imgg"
+          src="{% static 'piconverterapp/media/Pi-Network.png' %}"
+          alt=""
+        />
+      </aside>
+      <aside class="down">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          font-weight="600"
+          fill="currentColor"
+          class="bi bi-chevron-down"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+          />
+        </svg>
+      </aside>
+    </nav>
+
+    <section class="set1">
+      <aside class="logo">
+        <img src="{% static 'piconverterapp/media/Pi-Network.png' %}" alt="" />
+      </aside>
+      <aside class="logo-txt">Welcome to the Pi Browser</aside>
+
+      <aside class="icon-set">
+        <div class="icon-holder">
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/fire.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Fireside</si>
+            </div>
+          </a>
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/wallet.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Wallet</si>
+            </div>
+          </a>
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/bob.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Brainstorm</si>
+            </div>
+          </a>
+        </div>
+        <br />
+        <div class="icon-holder">
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/mine.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Mine</si>
+            </div>
+          </a>
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/block.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Blockchain</si>
+            </div>
+          </a>
+          <a href="/develop/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/dev.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Develop</si>
+            </div>
+          </a>
+        </div>
+        <br />
+        <div class="icon-holder">
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/kyc.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>KYC</si>
+            </div>
+          </a>
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/msg.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Chat</si>
+            </div>
+          </a>
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/prov.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Profiles</si>
+            </div>
+          </a>
+        </div>
+        <br />
+        <div class="icon-holder">
+          <a href="/pi-payment/selection" class="lik">
+            <div class="icon">
+              <div
+                class=""
+                style="
+                  border: 1px solid purple;
+                  border-radius: 10px;
+                  padding: 3px;
+                "
+              >
+                <img
+                  class=""
+                  src="{% static 'piconverterapp/domain.svg' %}"
+                  alt=""
+                  width="55"
+                  height="55"
+                />
+                <br />
+              </div>
+              <si>Domain</si>
+            </div>
+          </a>
+
+          <a href="/pi-payment/selection" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/p2p.jpg' %}"
+                alt=""
+              />
+              <br />
+              <si>Trade id</si>
+            </div>
+          </a>
+
+          <a href="/pi-wallet/" class="lik">
+            <div class="icon">
+              <img
+                class="img3"
+                src="{% static 'piconverterapp/media/lockedpi.png' %}"
+                alt=""
+              />
+              <br />
+              <si>Unlock pi</si>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+      <br />
+      <br />
+      <aside class="ijf">
+        <button class="exbtn">
+          <img src="{% static 'piconverterapp/media/compass.png' %}" alt="" />
+          Explore the Testnet Ecosystem
+        </button>
+      </aside>
+      <br />
+      <br />
+    </section>
+
+    <script>
+      var load = document.getElementById("load-body");
+
+      window.onload = function () {
+        setTimeout(() => {
+          load.style.display = "none";
+        }, 1000);
+      };
+    </script>
+  </body>
 </html>
